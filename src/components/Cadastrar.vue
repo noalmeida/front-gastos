@@ -2,7 +2,7 @@
     <div class="container-fluid p-5">
         <div class="row">
               <div class="col-md-4"></div>
-              <div class="col-md-4 p-5">  <h1 id="tituloCadastro">Cadastrar Gastos</h1></div>
+              <div class="col-md-4">  <h1 id="tituloCadastro">Cadastrar Gastos</h1></div>
               <div class="col-md-4"></div>
             
         </div>
@@ -32,8 +32,8 @@
                     <div class="mx-auto" style="width: 200px;"> 
                         <button type="submit" class="btn btn-warning">Cadastrar</button>
                         </div>
+                        <router-link to="/listar"><button id="linkListar" type="button" class="btn btn-danger mt-1">Listar Gastos</button></router-link>
                         
-                        <button id="linkListar" type="button" class="btn btn-danger mt-1">Listar Gastos</button>
                        
                         
                     
@@ -63,14 +63,14 @@ export default {
 </script>
 
 <style scoped>
-#tituloCadastro, .btn {
-    margin-left: 20% !important;
+#tituloCadastro {
+    margin-left: 4% !important;
 }
 #linkListar {
-    background-color: brown;
+    background-color: #d2454d;
     color: azure;
     margin-bottom: 60%;
-    margin-right: 14% !important;
+
 }
 
 
