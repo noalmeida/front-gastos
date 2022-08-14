@@ -13,17 +13,17 @@
                           <div class="card-body">
                             <ul class="list-group">
                                 <li class="list-group-item">Id gasto</li>
-                                <input type="text" class="form-control" id="idGasto" aria-describedby="idGasto">
+                                <input v-model="ObgResponseDetalhes.id" type="text" class="form-control" align="center" id="idGasto" aria-describedby="idGasto">
                                 <li class="list-group-item">Nome da pessoa</li>
-                                <input type="text" class="form-control" id="Nome" aria-describedby="Nome">
+                                <input v-model="ObgResponseDetalhes.nome" type="text" class="form-control" align="center" id="Nome" aria-describedby="Nome">
                                 <li class="list-group-item">Descrição</li>
-                                <textarea class="form-control" id="inputDescricao" rows="3"></textarea>
+                                <textarea v-model="ObgResponseDetalhes.descricao" class="form-control" id="inputDescricao" rows="3"></textarea>
                                 <li class="list-group-item">data/hora</li>
-                                <input type="date" class="form-control" id="inputDate">
+                                <input v-model="ObgResponseDetalhes.datahora" type="date" class="form-control" align="center" id="inputDate">
                                 <li class="list-group-item">Valor</li>
-                                 <input type="number" class="form-control" id="inputValor">
+                                 <input v-model="ObgResponseDetalhes.valor" type="number" class="form-control" align="center" id="inputValor">
                                 <li class="list-group-item">Tags</li>
-                                <input type="text" class="form-control" id="inputTag">
+                                <input v-model="ObgResponseDetalhes.tags" type="text" class="form-control" align="center" id="inputTag">
                              </ul>
                           </div>
                      </div>
@@ -42,12 +42,44 @@
 <script>
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Gastos from "../services/gastos"
+
 export default {
-  name: 'DetalharGastos'
+  name: 'DetalharGastos',
+  data(){
+        return{
+            id:'',
+            ObgResponseDetalhes : {}
+        }
+      },
+   mounted(){
+       this.detalhesById();
+      },
+   created() {
+        if(this.$route.params.id){
+         this.id = this.$route.params.id;
+        }
+      },
+
+   methods: {
+       detalhesById (){
+         Gastos.listarById(this.id).then(res=> {
+            console.log("entrou aqui na chamada deltahes by id")
+            console.log(res.data);
+            console.log(res);
+            this.ObgResponseDetalhes = res.data;
+         })
+       }
+      }
 }
 </script>
 <style>
 .w-75 {
    margin-left: 10% !important;
+}
+.form-control {
+  color:brown;
+  font-weight: 700;
+  text-align: center
 }
 </style>
