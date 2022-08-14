@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid p-5">
+    <div class="container-fluid">
         <div class="row">
               <div class="col-md-4"></div>
               <div class="col-md-4">  <h1 id="tituloCadastro">Cadastrar Gastos</h1></div>

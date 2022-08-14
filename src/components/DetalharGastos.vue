@@ -1,13 +1,13 @@
 <template>
- <div class="container-fluid">
+ <div class="container-fluid p-5">
       <div class="row">
                   <div class="col-md-4"></div>
-                  <div class="col-md-4 p-5">  <h1 id="tituloDetalhar">Detalhar</h1></div>
+                  <div class="col-md-4">  <h1 id="tituloDetalhar">Detalhar</h1></div>
                   <div class="col-md-4"></div>
       </div>
       <div class="row">
                   <div class="col-md-4"></div>
-                  <div class="col-md-4"> 
+                  <div class="col-md-4 p-5"> 
                     <!-- bloco de detalhes -->
                     <div class="card w-75">
                           <div class="card-body">

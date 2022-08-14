@@ -1,7 +1,7 @@
 <template>
 <h1 id="tituloListar">Listar Gastos</h1>
 
-<div class="l-cards" >
+<div class="l-cards">
   <article class="c-card" v-for="arr  in ArrData" :key="arr.id">
     <div class="c-card__image">
       <div class="c-card__content">

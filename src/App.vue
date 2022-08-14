@@ -13,11 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-   background:
-        linear-gradient(rgb(166, 131, 247), transparent),
-        linear-gradient(to top left, rgb(96, 251, 96), transparent),
-        linear-gradient(to top right, blue, transparent);
-    background-blend-mode: screen;
+  height:100vh;
 }
 
 nav {
