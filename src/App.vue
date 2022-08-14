@@ -1,6 +1,6 @@
 <template>
   <nav>
-    | <router-link to="/">Home</router-link> |
+    | <router-link to="/">Tela Inicial</router-link> 
   
   </nav>
   <router-view/>
@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+   background:
+        linear-gradient(rgb(166, 131, 247), transparent),
+        linear-gradient(to top left, rgb(96, 251, 96), transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
 }
 
 nav {

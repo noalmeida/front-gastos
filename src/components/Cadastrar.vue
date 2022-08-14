@@ -29,10 +29,18 @@
                     <label for="inputTag" class="form-label">Tags</label>
                     <input type="text" class="form-control" v-model="gasto.tags" id="inputTag">
                 </div>
-                    <div class="mx-auto" style="width: 200px;"> 
-                        <button type="submit" class="btn btn-warning">Cadastrar</button>
+                    <div class="container-button"> 
+                        <span id="span__buttom">
+                            <button type="submit" class="btn btn-warning">Cadastrar</button>
+                        </span>
+                        <span id="span__buttom">
+                            <router-link to="/listar">
+                            <button type="button" id="buttom_listar" class="btn btn-primary">Listar Gastos</button>
+                            </router-link>
+                        </span>
+                        
                         </div>
-                        <router-link to="/listar"><button type="button" class="btn btn-primary mt-1">Listar Gastos</button></router-link>
+                        
                         
                        
                         
@@ -93,11 +101,29 @@ export default {
 <style scoped>
 #tituloCadastro {
     margin-left: 4% !important;
+   
 }
-#linkListar {
-    color: azure;
-    margin-bottom: 60%;
-
+.container-button {
+    display: flex !important;
+    justify-content: space-around;
+   
+}
+#buttom_listar {
+    margin-bottom:20%;
+    background-color: #6c5ce7;
+    border-color: #5f27cd;
+}
+.btn {
+    width: 200px;
+    background-color: #ff7675;
+    color:aliceblue;
+    border-color: #d63031;
+}
+.btn:hover{
+    background-color: #576574;
+}
+#buttom_listar:hover {
+    background-color: #576574; 
 }
 
 
