@@ -1,5 +1,5 @@
 <template>
-<h1 id="tituloListar">Listar Gastos</h1>
+<h1 id="tituloListar">Lista de Gastos</h1>
 
 <div class="l-cards">
   <article class="c-card" v-for="arr  in ArrData" :key="arr.id">
@@ -55,7 +55,8 @@ export default {
 <style scoped>
 
 .u-text-placeholder {
-  background-color: #a2a8b1;
+  background-color: #CED4DA;
+  border-bottom: thin solid #A9A9A9;
   display: inline-block;
   height: 20px;
   margin-left: 65px;
@@ -63,7 +64,8 @@ export default {
 }
 .u-text-placeholder-nome {
   margin-left: 5px;
-  background-color: #a2a8b1;
+  border-bottom: thin solid #A9A9A9;
+  background-color: #CED4DA;
   display: inline-block;
   height: 20px;
   font-weight: 600;
@@ -93,6 +95,12 @@ export default {
     justify-content: space-around;
     padding: 15px;
     height: 150px;
+  }
+  .btn {
+    background-color: #6c5ce7;
+  }
+  .btn:hover{
+     background-color: #636e72;
   }
 
 </style>

@@ -25,7 +25,7 @@
                 </div>
                    <div class="mb-3">
                     <label for="inputValor" class="form-label">Valor</label>
-                    <input type="number" min="0" max="10000" step=".01" class="form-control" v-model="gasto.valor" id="inputValor">
+                    <input type="number" min="0" max="50000" step=".01" class="form-control" v-model="gasto.valor" id="inputValor">
                     <label for="inputTag" class="form-label">Tags</label>
                     <input type="text" class="form-control" v-model="gasto.tags" id="inputTag">
                 </div>

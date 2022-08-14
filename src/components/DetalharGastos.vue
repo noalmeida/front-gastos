@@ -2,7 +2,7 @@
  <div class="container-fluid p-5">
       <div class="row">
                   <div class="col-md-4"></div>
-                  <div class="col-md-4">  <h1 id="tituloDetalhar">Detalhar</h1></div>
+                  <div class="col-md-4">  <h1 id="tituloDetalhar">Detalhes</h1></div>
                   <div class="col-md-4"></div>
       </div>
       <div class="row">
@@ -12,7 +12,7 @@
                     <div class="card w-75">
                           <div class="card-body">
                             <ul class="list-group">
-                                <li class="list-group-item">Id gasto</li>
+                                <li class="list-group-item">ID gasto</li>
                                 <input v-model="ObgResponseDetalhes.id" type="text" class="form-control" align="center" id="idGasto" aria-describedby="idGasto">
                                 <li class="list-group-item">Nome da pessoa</li>
                                 <input v-model="ObgResponseDetalhes.nome" type="text" class="form-control" align="center" id="Nome" aria-describedby="Nome">
