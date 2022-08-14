@@ -12,20 +12,20 @@
             <form @submit.prevent="salvar">
                 <div class="mb-3">
                     <label for="inputNome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="inputNome" aria-describedby="inputNome" v-model="gasto.nome">
+                    <input type="text" class="form-control" id="inputNome" aria-describedby="inputNome" v-model="gasto.nome" required>
                     <div id="inputNome" class="form-text"></div>
                 </div>
                 <div class="mb-3">
                     <label for="inputDescricao" class="form-label">Descrição</label>
-                    <textarea class="form-control" id="inputDescricao" rows="3" v-model="gasto.descricao"></textarea>
+                    <textarea class="form-control" id="inputDescricao" rows="3" v-model="gasto.descricao" required></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="inputDate" class="form-label">Data</label>
-                    <input type="date" class="form-control" v-model="gasto.datahora" id="inputDate">
+                    <input type="date" class="form-control" v-model="gasto.datahora" id="inputDate" required>
                 </div>
                    <div class="mb-3">
                     <label for="inputValor" class="form-label">Valor</label>
-                    <input type="number" min="0" max="50000" step=".01" class="form-control" v-model="gasto.valor" id="inputValor">
+                    <input type="number" min="0" max="50000" step=".01" class="form-control" v-model="gasto.valor" id="inputValor" required>
                     <label for="inputTag" class="form-label">Tags</label>
                     <input type="text" class="form-control" v-model="gasto.tags" id="inputTag">
                 </div>
@@ -84,12 +84,12 @@ export default {
   methods: {
       
       salvar(){
-          console.log(this.gasto)
           Gasto.salvar(this.gasto).then(res=>{
              document.querySelector('form').reset();
-             alert('Salvo com sucesso')
-          
-          })
+             alert('Salvo com sucesso')        
+          }).catch((err) => {
+              alert("Não foi possível fazer a requisição no momento")
+         });
       },
      
 	  
